@@ -1,5 +1,6 @@
 let rbtn = document.getElementById("button-random-dog");
 let bbtn = document.getElementById("button-show-breed");
+let sbtn = document.getElementById("button-show-sub-breed")
 
 let binpt = document.getElementById("input-breed");
 
@@ -18,6 +19,25 @@ bbtn.addEventListener('click', e => {
         .then(response => response.json())
         .then(json => content.innerHTML = json.status === "success" ? "<img src=\"" + json.message + "\" alt=\"dogo\">" :
             "<p>Breed not found!</p>")
+        .catch(e => console.log(e.message))
+});
+
+sbtn.addEventListener('click', e => {
+    let breed = binpt.value.toLowerCase();
+    fetch("https://dog.ceo/api/breed/"+breed+"/list")
+        .then(response => response.json())
+        .then(json => {
+            if (json.status === "error"){content.innerHTML = "<p>"+json.message.split("(")[0].trim()+"!</p>"}
+            else if (json.message.length === 0) {content.innerHTML = "<p>No sub-breeds found!</p>"}
+            else {
+                let breeds = json.message;
+                let s = "<ol type='1'>";
+                for (let i= 0; i<breeds.length; i++) {
+                    s += "<li>"+breeds[i]+"</li>"
+                }
+                s += "</ol>";
+                content.innerHTML = s;}
+            })
         .catch(e => console.log(e.message))
 });
 
