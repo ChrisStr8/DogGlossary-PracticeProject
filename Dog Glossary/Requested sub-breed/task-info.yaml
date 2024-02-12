@@ -418,19 +418,15 @@ files:
           await new Test().runTests()
       }).timeout(30000);
     learner_created: false
-  - name: src/mochilamvan.jpg
-    visible: true
-    is_binary: true
-    learner_created: true
   - name: src/script.js
     visible: true
     learner_created: true
   - name: src/styles.css
     visible: true
     learner_created: true
-feedback_link: https://hyperskill.org/projects/323/stages/1808/implement#comment
+feedback_link: https://hyperskill.org/learn/step/26330#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Thu, 08 Feb 2024 05:49:42 UTC"
-record: -1
+  time: "Mon, 12 Feb 2024 22:15:32 UTC"
+record: 12

@@ -1,4 +1,3 @@
-.breeds {
-    color: aqua;
-    list-style-type: decimal;
+.sublist {
+    list-style-type: circle
 }

@@ -1,6 +1,7 @@
 let rbtn = document.getElementById("button-random-dog");
 let bbtn = document.getElementById("button-show-breed");
-let sbtn = document.getElementById("button-show-sub-breed")
+let sbtn = document.getElementById("button-show-sub-breed");
+let abtn = document.getElementById("button-show-all")
 
 let binpt = document.getElementById("input-breed");
 
@@ -37,7 +38,33 @@ sbtn.addEventListener('click', e => {
                 }
                 s += "</ol>";
                 content.innerHTML = s;}
-            })
+        })
         .catch(e => console.log(e.message))
 });
 
+abtn.addEventListener('click', e => {
+    fetch("https://dog.ceo/api/breeds/list/all")
+        .then(response => response.json())
+        .then(json => {
+            if (json.status === "error"){content.innerHTML = "<p>"+json.message.split("(")[0].trim()+"!</p>"}
+            else {
+                let breeds = json.message;
+                let s = "<ol type='1'>";
+                for (const breed in breeds) {
+                    let subBreeds = breeds[breed];
+                    s += "<li>"+breed;
+                    if(subBreeds.length > 0){
+                        s += "<ul class='sublist'>"
+                        s += "<li>"+subBreeds.toString()+"</li>";
+                        /*for (let i= 0; i<subBreeds.length; i++) {
+                            s += "<li>"+subBreeds[i]+"</li>"
+                        }*/
+                        s += "</ul>"
+                    }
+                    s += "</li>";
+                }
+                s += "</ol>";
+                content.innerHTML = s;}
+        })
+        .catch(e => {console.log(e.message); console.log("test");})
+});
