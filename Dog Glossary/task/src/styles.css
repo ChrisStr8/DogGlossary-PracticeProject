@@ -1,3 +1,7 @@
+body {
+    background-color: lavender;
+}
+
 .sub-breeds {
     color: black;
     list-style-type: circle;
@@ -8,18 +12,35 @@
 }
 
 .button {
+    transition-duration: 1s;
     background-color: cornflowerblue;
     border: 2px solid blue;
+    padding: 15px 32px;
     border-radius: 8px;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.s1 {
     width: 50%;
 }
 
 .input {
     font-family: "Century Gothic", serif;
-    width: 50%;
+    border: 2px solid blue;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .content {
     width: 200px;
     height: 200px;
+}
+
+h1 {
+    color: cornflowerblue;
 }
