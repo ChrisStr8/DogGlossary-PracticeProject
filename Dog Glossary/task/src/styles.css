@@ -41,6 +41,10 @@ body {
     height: 200px;
 }
 
+.error {
+    color: red;
+}
+
 h1 {
     color: cornflowerblue;
 }

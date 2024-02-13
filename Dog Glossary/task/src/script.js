@@ -28,10 +28,10 @@ bbtn.addEventListener('click', e => {
         fetch(url)
             .then(response => response.json())
             .then(json => content.innerHTML = json.status === "success" ? "<img src='" + json.message + "' alt='"+breed+"' id='"+breed+"'>" :
-                "<p>Breed not found!</p>")
+                "<p class='error'>Breed not found!</p>")
             .catch(e => console.log(e.message))
     }
-    else content.innerHTML = "<p>Breed Input is Empty</p>";
+    else content.innerHTML = "<p class='error'>Breed Input is Empty</p>";
 });
 
 sbtn.addEventListener('click', e => {
@@ -40,8 +40,8 @@ sbtn.addEventListener('click', e => {
         fetch("https://dog.ceo/api/breed/"+breed.split('-')[0]+"/list")
             .then(response => response.json())
             .then(json => {
-                if (json.status === "error"){content.innerHTML = "<p>"+json.message.split("(")[0].trim()+"!</p>"}
-                else if (json.message.length === 0) {content.innerHTML = "<p>No sub-breeds found!</p>"}
+                if (json.status === "error"){content.innerHTML = "<p class='error'>"+json.message.split("(")[0].trim()+"!</p>"}
+                else if (json.message.length === 0) {content.innerHTML = "<p class='error'>No sub-breeds found!</p>"}
                 else {
                     breed = breed.split('-')[0];
                     inpt.value = breed;
@@ -55,14 +55,14 @@ sbtn.addEventListener('click', e => {
             })
             .catch(e => console.log(e.message))
     }
-    else content.innerHTML = "<p>Breed Input is Empty</p>";
+    else content.innerHTML = "<p class='error'>Breed Input is Empty</p>";
 });
 
 abtn.addEventListener('click', e => {
     fetch("https://dog.ceo/api/breeds/list/all")
         .then(response => response.json())
         .then(json => {
-            if (json.status === "error"){content.innerHTML = "<p>"+json.message.split("(")[0].trim()+"!</p>"}
+            if (json.status === "error"){content.innerHTML = "<p class='error'>"+json.message.split("(")[0].trim()+"!</p>"}
             else {
                 let breeds = json.message;
                 let s = "<ol class='breeds' type='1'>";
