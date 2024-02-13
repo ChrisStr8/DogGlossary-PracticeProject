@@ -304,6 +304,7 @@ files:
 feedback_link: https://hyperskill.org/learn/step/26329#comment
 status: Solved
 feedback:
-  message: Congratulations!
-  time: "Thu, 08 Feb 2024 04:42:10 UTC"
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Tue, 13 Feb 2024 03:27:39 UTC"
 record: 11

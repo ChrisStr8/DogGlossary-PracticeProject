@@ -1,3 +1,25 @@
-.sublist {
-    list-style-type: circle
+.sub-breeds {
+    color: black;
+    list-style-type: circle;
+}
+
+.breeds > li:hover{
+    color: blue;
+}
+
+.button {
+    background-color: cornflowerblue;
+    border: 2px solid blue;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.input {
+    font-family: "Century Gothic", serif;
+    width: 50%;
+}
+
+.content {
+    width: 200px;
+    height: 200px;
 }

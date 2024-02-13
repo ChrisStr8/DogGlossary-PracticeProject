@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="debug" type="JavascriptDebugType" uri="http://localhost:63342/Dog Glossary/Dog Glossary/task/src/index.html" useBuiltInWebServerPort="true">
+    <mapping url="http://localhost:63342/Dog Glossary/Dog Glossary/task/src" local-file="$PROJECT_DIR$/Dog Glossary/task/src/script.js" />
+    <mapping url="http://localhost:63342/Dog Glossary/Dog Glossary/task/src" local-file="$PROJECT_DIR$/Dog Glossary/task/src/styles.css" />
+    <mapping url="http://localhost:63342/Dog Glossary/Dog Glossary/task/src" local-file="$PROJECT_DIR$/Dog Glossary/task/src/index.html" />
+    <method v="2" />
+  </configuration>
+</component>
