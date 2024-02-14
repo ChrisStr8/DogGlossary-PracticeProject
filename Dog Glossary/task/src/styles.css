@@ -3,20 +3,21 @@ body {
 }
 
 .sub-breeds {
-    color: black;
+    color: darkblue;
     list-style-type: circle;
 }
 
 .breeds > li:hover{
-    color: blue;
+    color: crimson;
 }
 
 .button {
-    transition-duration: 1s;
+    transition-duration: 2s;
     background-color: cornflowerblue;
     border: 2px solid blue;
     padding: 15px 32px;
     border-radius: 8px;
+    font-family: "Century Gothic", serif;
     width: 100%;
 }
 
@@ -26,6 +27,9 @@ body {
 }
 
 .s1 {
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 8px;
     width: 50%;
 }
 
@@ -37,8 +41,9 @@ body {
 }
 
 .content {
-    width: 200px;
-    height: 200px;
+    color: darkblue;
+    font-family: "Century Gothic", serif;
+    border-radius: 25px;
 }
 
 .error {
